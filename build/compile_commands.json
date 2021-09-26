@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/liuxiao/code/CV_in_HIT/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-7   -isystem /usr/local/include -isystem /usr/local/include/opencv  -g   -o CMakeFiles/homography.dir/homography/homography.cpp.o -c /home/liuxiao/code/CV_in_HIT/homography/homography.cpp",
+  "file": "/home/liuxiao/code/CV_in_HIT/homography/homography.cpp"
+}
+]
