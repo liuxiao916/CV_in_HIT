@@ -1,7 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/homography.dir/homography/homography.cpp.o"
-  "homography.pdb"
+  "CMakeFiles/homography.dir/homography/homography.cpp.o.d"
   "homography"
+  "homography.pdb"
 )
 
 # Per-language clean rules from dependency scanning.
