@@ -7,6 +7,7 @@ find_package(OpenCV REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
 
 add_executable(homography homography/homography.cpp)
+add_executable(calibration calibration/calibration.cpp)
 
 # directory of opencv library
 link_directories(${OpenCV_LIBRARY_DIRS})

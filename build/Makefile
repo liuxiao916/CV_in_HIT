@@ -149,6 +149,43 @@ homography/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/homography.dir/build.make CMakeFiles/homography.dir/build
 .PHONY : homography/fast
 
+#=============================================================================
+# Target rules for targets named calibration
+
+# Build rule for target.
+calibration: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 calibration
+.PHONY : calibration
+
+# fast build rule for target.
+calibration/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calibration.dir/build.make CMakeFiles/calibration.dir/build
+.PHONY : calibration/fast
+
+calibration/calibration.o: calibration/calibration.cpp.o
+.PHONY : calibration/calibration.o
+
+# target to build an object file
+calibration/calibration.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calibration.dir/build.make CMakeFiles/calibration.dir/calibration/calibration.cpp.o
+.PHONY : calibration/calibration.cpp.o
+
+calibration/calibration.i: calibration/calibration.cpp.i
+.PHONY : calibration/calibration.i
+
+# target to preprocess a source file
+calibration/calibration.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calibration.dir/build.make CMakeFiles/calibration.dir/calibration/calibration.cpp.i
+.PHONY : calibration/calibration.cpp.i
+
+calibration/calibration.s: calibration/calibration.cpp.s
+.PHONY : calibration/calibration.s
+
+# target to generate assembly for a file
+calibration/calibration.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calibration.dir/build.make CMakeFiles/calibration.dir/calibration/calibration.cpp.s
+.PHONY : calibration/calibration.cpp.s
+
 homography/homography.o: homography/homography.cpp.o
 .PHONY : homography/homography.o
 
@@ -183,7 +220,11 @@ help:
 	@echo "... package"
 	@echo "... package_source"
 	@echo "... rebuild_cache"
+	@echo "... calibration"
 	@echo "... homography"
+	@echo "... calibration/calibration.o"
+	@echo "... calibration/calibration.i"
+	@echo "... calibration/calibration.s"
 	@echo "... homography/homography.o"
 	@echo "... homography/homography.i"
 	@echo "... homography/homography.s"

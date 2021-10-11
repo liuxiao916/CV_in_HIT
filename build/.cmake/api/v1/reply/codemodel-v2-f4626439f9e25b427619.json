@@ -15,7 +15,8 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -30,7 +31,8 @@
 					"name" : "homework",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -38,8 +40,15 @@
 			[
 				{
 					"directoryIndex" : 0,
+					"id" : "calibration::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-calibration-Debug-160e38dd1da420548581.json",
+					"name" : "calibration",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
 					"id" : "homography::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-homography-Debug-9e513296781c96a08365.json",
+					"jsonFile" : "target-homography-Debug-ee52101ec951138e4f4a.json",
 					"name" : "homography",
 					"projectIndex" : 0
 				}
