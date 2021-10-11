@@ -13,71 +13,100 @@ using namespace std;
 class ChessBoard
 {
     public:
-        ChessBoard(cv::Mat img, int width = 9, int height = 6, double size = 30):img(img), width(width), height(height), size(size)
+        ChessBoard(std::vector<cv::String> images, int width = 9, int height = 6, double size = 30):images(images), width(width), height(height), size(size)
         {}
         ~ChessBoard(){}
         void get_world_coordinations(void);
-        bool get_corners(void);
+        void get_corners(void);
+        void calibration(void);
 
     private:
         int width;
         int height;
+        int rows;
+        int cols;
         double size;
-        cv::Mat img;
-        cv::Mat dst;
-        cv::Mat H;
+        cv::Mat img, gray;
+        std::vector<cv::String> images;
         std::vector<cv::Point2f> corners;
-        std::vector<cv::Point2f> worlds;
-    
+        std::vector<cv::Point3f> worlds;
+        std::vector<std::vector<cv::Point2f> > imgpoints;
+        std::vector<std::vector<cv::Point3f> > worldpoints;
+        cv::Mat cameraMatrix, distCoeffs, R, T;
 };
 
 void ChessBoard::get_world_coordinations(void){
     for (size_t i = 0; i < height; i++){
         for (size_t j = 0; j < width; j++)
         {
-            worlds.push_back(cv::Point2f(j*size,i*size));
+            worlds.push_back(cv::Point3f(j*size,i*size,0));
         }  
     }
 }
 
-bool ChessBoard::get_corners(void){
-    bool flag = cv::findChessboardCorners(img,cv::Size(width,height),corners);
-    dst =img.clone();
+void ChessBoard::get_corners(void){
+    cv::TermCriteria criteria(CV_TERMCRIT_EPS | CV_TERMCRIT_ITER, 30, 0.001);
+    for (int i=0; i<images.size();i++){
+        img = cv::imread(images[i]);
+        rows = img.rows;
+        cols = img.cols;
+        if (img.empty()){
+        cout << "Empty input!"<<endl;
+        }
+        bool success = cv::findChessboardCorners(img,cv::Size(width,height),corners);
+        cv::cvtColor(img, gray, cv::COLOR_BGR2GRAY);
+        if (success){
+            cv::cornerSubPix(gray, corners, cv::Size(11, 11), cv::Size(-1, -1), criteria);
+            imgpoints.push_back(corners);
+            worldpoints.push_back(worlds);
+        }
+
+    }
+
+    
     //cv::drawChessboardCorners(dst,cv::Size(width,height),corners,flag);
     //cv::imwrite("dst.jpg",dst);
-    return flag;
+}
+
+void ChessBoard::calibration(void){
+    cv::calibrateCamera(worldpoints, imgpoints, cv::Size(rows, cols), cameraMatrix, distCoeffs, R, T);
+    // 内参矩阵
+	std::cout << "cameraMatrix : " << cameraMatrix << std::endl;
+	// 透镜畸变系数
+	std::cout << "distCoeffs : " << distCoeffs << std::endl;
+	// rvecs
+	std::cout << "Rotation vector : " << R << std::endl;
+	// tvecs
+	std::cout << "Translation vector : " << T << std::endl;
+
 }
 
 
-
 int main(){
-    cv::Mat img = cv::imread("/home/liuxiao/code/CV_in_HIT/data/left13.jpg");
-    if (img.empty()){
-        cout << "Empty input!"<<endl;
-        return 0;
-    }
-    cv::Mat result;
-    ChessBoard chessboard(img);
+    std::vector<cv::String> images;
+    std::string path = "../data/calibration/Images/*.jpg";
+    cv::glob(path, images);
+    ChessBoard chessboard(images);
     chessboard.get_world_coordinations();
     chessboard.get_corners();
-    result = chessboard.get_H();
+    chessboard.calibration();
 
     //extract result to txt file
-    ofstream outfile("/home/liuxiao/code/CV_in_HIT/homography/result/left13.txt");
-    for (size_t i = 0; i < 3; i++)
-    {
-        for (size_t j = 0; j < 3; j++)
-        {  
-            if (!(i == 2 && j == 2)){
-                outfile << result.at<double>(3*i+j,0) <<" " ;
-            }else{
-                outfile << 1;
-            }
+    // ofstream outfile("/home/liuxiao/code/CV_in_HIT/homography/result/left13.txt");
+    // for (size_t i = 0; i < 3; i++)
+    // {
+    //     for (size_t j = 0; j < 3; j++)
+    //     {  
+    //         if (!(i == 2 && j == 2)){
+    //             outfile << result.at<double>(3*i+j,0) <<" " ;
+    //         }else{
+    //             outfile << 1;
+    //         }
             
-        }
-        outfile <<endl; 
-    }
-    outfile.close();
+    //     }
+    //     outfile <<endl; 
+    // }
+    // outfile.close();
     
     return 0;
 }

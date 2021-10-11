@@ -6,7 +6,7 @@
 },
 {
   "directory": "/home/liuxiao/code/CV_in_HIT/build",
-  "command": "/usr/bin/x86_64-linux-gnu-g++-7  -I/usr/local/include/opencv -g -o CMakeFiles/calibration.dir/calibration/calibration.cpp.o -c /home/liuxiao/code/CV_in_HIT/calibration/calibration.cpp",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-7  -isystem /usr/local/include/opencv -g -o CMakeFiles/calibration.dir/calibration/calibration.cpp.o -c /home/liuxiao/code/CV_in_HIT/calibration/calibration.cpp",
   "file": "/home/liuxiao/code/CV_in_HIT/calibration/calibration.cpp"
 }
 ]

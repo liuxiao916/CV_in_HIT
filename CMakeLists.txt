@@ -13,3 +13,4 @@ add_executable(calibration calibration/calibration.cpp)
 link_directories(${OpenCV_LIBRARY_DIRS})
 # opencv libraries
 target_link_libraries(homography ${OpenCV_LIBS})
+target_link_libraries(calibration ${OpenCV_LIBS})

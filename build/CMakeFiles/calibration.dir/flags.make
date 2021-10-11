@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/x86_64-linux-gnu-g++-7
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/usr/local/include/opencv
+CXX_INCLUDES = -isystem /usr/local/include/opencv
 
 CXX_FLAGS = -g
 
