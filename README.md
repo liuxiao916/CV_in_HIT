@@ -3,4 +3,7 @@ The homework for Computer Vision in Harbin Institute of Technology
 
 ## Coordinates
 本作业建立坐标系如下图  
-![coordinates](data/coordinates.png)
+![coordinates](data/coordinates.png)  
+
+# Requirement
+Opencv 3.4.X
