@@ -8,9 +8,11 @@ include_directories(${OpenCV_INCLUDE_DIRS})
 
 add_executable(homography homography/homography.cpp)
 add_executable(calibration calibration/calibration.cpp)
+add_executable(filter filter/filter.cpp)
 
 # directory of opencv library
 link_directories(${OpenCV_LIBRARY_DIRS})
 # opencv libraries
 target_link_libraries(homography ${OpenCV_LIBS})
 target_link_libraries(calibration ${OpenCV_LIBS})
+target_link_libraries(filter ${OpenCV_LIBS})

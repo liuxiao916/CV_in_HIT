@@ -62,7 +62,6 @@ void ChessBoard::get_corners(void){
         }
 
     }
-
     
     //cv::drawChessboardCorners(dst,cv::Size(width,height),corners,flag);
     //cv::imwrite("dst.jpg",dst);
