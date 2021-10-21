@@ -1,6 +1,0 @@
-/Users/liuxiao/Documents/GitHub/CV_in_HIT/build/CMakeFiles/edit_cache.dir
-/Users/liuxiao/Documents/GitHub/CV_in_HIT/build/CMakeFiles/rebuild_cache.dir
-/Users/liuxiao/Documents/GitHub/CV_in_HIT/build/CMakeFiles/package_source.dir
-/Users/liuxiao/Documents/GitHub/CV_in_HIT/build/CMakeFiles/package.dir
-/Users/liuxiao/Documents/GitHub/CV_in_HIT/build/CMakeFiles/calibration.dir
-/Users/liuxiao/Documents/GitHub/CV_in_HIT/build/CMakeFiles/homography.dir
