@@ -1,12 +1,13 @@
 [
 {
-  "directory": "/home/liuxiao/code/CV_in_HIT/build",
-  "command": "/usr/bin/x86_64-linux-gnu-g++-7  -isystem /usr/local/include/opencv -g -o CMakeFiles/homography.dir/homography/homography.cpp.o -c /home/liuxiao/code/CV_in_HIT/homography/homography.cpp",
-  "file": "/home/liuxiao/code/CV_in_HIT/homography/homography.cpp"
+  "directory": "/Users/liuxiao/Documents/GitHub/CV_in_HIT/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -isystem /usr/local/Cellar/opencv/4.2.0_1/include/opencv4  -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk   -o CMakeFiles/calibration.dir/calibration/calibration.cpp.o -c /Users/liuxiao/Documents/GitHub/CV_in_HIT/calibration/calibration.cpp",
+  "file": "/Users/liuxiao/Documents/GitHub/CV_in_HIT/calibration/calibration.cpp"
 },
+
 {
-  "directory": "/home/liuxiao/code/CV_in_HIT/build",
-  "command": "/usr/bin/x86_64-linux-gnu-g++-7  -isystem /usr/local/include/opencv -g -o CMakeFiles/calibration.dir/calibration/calibration.cpp.o -c /home/liuxiao/code/CV_in_HIT/calibration/calibration.cpp",
-  "file": "/home/liuxiao/code/CV_in_HIT/calibration/calibration.cpp"
+  "directory": "/Users/liuxiao/Documents/GitHub/CV_in_HIT/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -isystem /usr/local/Cellar/opencv/4.2.0_1/include/opencv4  -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk   -o CMakeFiles/homography.dir/homography/homography.cpp.o -c /Users/liuxiao/Documents/GitHub/CV_in_HIT/homography/homography.cpp",
+  "file": "/Users/liuxiao/Documents/GitHub/CV_in_HIT/homography/homography.cpp"
 }
 ]
