@@ -27,11 +27,11 @@ Opencv 3.4.X
 
 ### Homography
 <p float="left">
-    <img src="homography/result/left7/dst.jpg" width="200"/><img src="homography/result/left7/left7.png" width="200"/>
+    <img src="homography/result/left7/dst.jpg" width="300"/><img src="homography/result/left7/left7.png" width="300"/>
 </p>
 
 ### Optical Flow
-<center class="half">
+<center class="left">
     <img src="optical flow\sphere0.png" width="300"/><img src="optical flow\dst.jpg" width="300"/>
 </center>
 
