@@ -39,7 +39,7 @@ Opencv 3.4.X
 ![PSM](Photometric%20Stereo%20Method/重建图.jpg)
 
 ### Skin Detection
-<p class="half">
+<p float="left">
     <img src="data\skin\picture1.png" width="300"/><img src="data\skin\dst1.png" width="300"/>
 </p>
 
