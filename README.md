@@ -12,7 +12,7 @@ Opencv 3.4.X
 | File                      | Description                                                       |
 | ------------------------- | ----------------------------------------------------------------- |
 | calibration               | Use Opencv to calibrate a camera                                  |
-| filter                    | Source code about mean filter, Meadian filter and Gaussian filter |
+| filter                    | Source code about Mean filter, Meadian filter and Gaussian filter |
 | homography                | Detect chess board and calculate homography matrix                |
 | optical flow              | Calculate Lucas-Knanade optical flow                              |
 | Photometric Stereo Method | Use Photometric Stereo Method to rebuild a surface                |
