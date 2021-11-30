@@ -26,9 +26,9 @@ Opencv 3.4.X
 ![Gaussian](data/filter/dst/Gausian55_opencv.jpg)
 
 ### Homography
-<center class="half">
+<p float="left">
     <img src="homography/result/left7/dst.jpg" width="200"/><img src="homography/result/left7/left7.png" width="200"/>
-</center>
+</p>
 
 ### Optical Flow
 <center class="half">
