@@ -31,7 +31,7 @@ Opencv 3.4.X
 </p>
 
 ### Optical Flow
-<center class="left">
+<center float="left">
     <img src="optical flow\sphere0.png" width="300"/><img src="optical flow\dst.jpg" width="300"/>
 </center>
 
