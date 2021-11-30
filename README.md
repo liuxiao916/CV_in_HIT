@@ -23,7 +23,8 @@ Opencv 3.4.X
 ### Calibration
 ![calibration](data/calibration.png)
 ### Filter
-![Gaussian](data\filter\dst\Gausian55_opencv.jpg)
+![Gaussian](data/filter/dst/Gausian55_opencv.jpg)
+
 ### Homography
 <center class="half">
     <img src="homography\result\left7\dst.jpg" width="300"/><img src="homography\result\left7\left7.png" width="300"/>
