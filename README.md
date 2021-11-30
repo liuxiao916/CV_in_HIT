@@ -31,9 +31,9 @@ Opencv 3.4.X
 </p>
 
 ### Optical Flow
-<center float="left">
+<p float="left">
     <img src="optical flow\sphere0.png" width="300"/><img src="optical flow\dst.jpg" width="300"/>
-</center>
+</p>
 
 ### Photometric Stereo Method
 ![PSM](Photometric%20Stereo%20Method/重建图.jpg)
